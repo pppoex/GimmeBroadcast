@@ -1,0 +1,30 @@
+# 自动生成 — 添加新版本在此加条目
+# key 命名：nfo{minor版本号}（例：nfo0, nfo1, nfo11）
+
+[versions]
+nfo0  = "21.0.167"
+nfo1  = "21.1.233"
+nfo2  = "21.2.1-beta"
+nfo3  = "21.3.96"
+nfo4  = "21.4.157"
+nfo5  = "21.5.97"
+nfo6  = "21.6.20-beta"
+nfo7  = "21.7.25-beta"
+nfo8  = "21.8.53"
+nfo9  = "21.9.16-beta"
+nfo10 = "21.10.64"
+nfo11 = "21.11.42"
+
+[libraries]
+nfo0  = { module = "net.neoforged:neoforge", version.ref = "nfo0" }
+nfo1  = { module = "net.neoforged:neoforge", version.ref = "nfo1" }
+nfo2  = { module = "net.neoforged:neoforge", version.ref = "nfo2" }
+nfo3  = { module = "net.neoforged:neoforge", version.ref = "nfo3" }
+nfo4  = { module = "net.neoforged:neoforge", version.ref = "nfo4" }
+nfo5  = { module = "net.neoforged:neoforge", version.ref = "nfo5" }
+nfo6  = { module = "net.neoforged:neoforge", version.ref = "nfo6" }
+nfo7  = { module = "net.neoforged:neoforge", version.ref = "nfo7" }
+nfo8  = { module = "net.neoforged:neoforge", version.ref = "nfo8" }
+nfo9  = { module = "net.neoforged:neoforge", version.ref = "nfo9" }
+nfo10 = { module = "net.neoforged:neoforge", version.ref = "nfo10" }
+nfo11 = { module = "net.neoforged:neoforge", version.ref = "nfo11" }
