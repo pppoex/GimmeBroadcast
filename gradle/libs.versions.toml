@@ -1,0 +1,24 @@
+# Naming: forge-{MC minor version}
+# Format: version = "MC version-Forge version"
+
+[versions]
+forge-1  = "1.21.1-52.1.14"
+forge-3  = "1.21.3-53.1.10"
+forge-4  = "1.21.4-54.1.16"
+forge-5  = "1.21.5-55.1.10"
+forge-6  = "1.21.6-56.0.9"
+forge-8  = "1.21.8-58.1.18"
+forge-9  = "1.21.9-59.0.5"
+forge-10 = "1.21.10-60.1.9"
+forge-11 = "1.21.11-61.1.8"
+
+[libraries]
+forge-1  = { module = "net.minecraftforge:forge", version.ref = "forge-1" }
+forge-3  = { module = "net.minecraftforge:forge", version.ref = "forge-3" }
+forge-4  = { module = "net.minecraftforge:forge", version.ref = "forge-4" }
+forge-5  = { module = "net.minecraftforge:forge", version.ref = "forge-5" }
+forge-6  = { module = "net.minecraftforge:forge", version.ref = "forge-6" }
+forge-8  = { module = "net.minecraftforge:forge", version.ref = "forge-8" }
+forge-9  = { module = "net.minecraftforge:forge", version.ref = "forge-9" }
+forge-10 = { module = "net.minecraftforge:forge", version.ref = "forge-10" }
+forge-11 = { module = "net.minecraftforge:forge", version.ref = "forge-11" }

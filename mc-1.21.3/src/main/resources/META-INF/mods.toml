@@ -1,0 +1,17 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+    modId = "gimmebroadcast"
+    displayName = "GimmeBroadcast"
+    version = "${modVersion}"
+    side = "SERVER"
+    description = "Restores UDP LAN broadcast (224.0.2.60:4445)."
+
+[[dependencies.gimmebroadcast]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[53,54)"
+    ordering = "NONE"
+    side = "BOTH"
