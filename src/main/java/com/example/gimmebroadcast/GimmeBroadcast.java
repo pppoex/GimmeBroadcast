@@ -61,7 +61,7 @@ public class GimmeBroadcast {
         if (broadcastThread != null) { broadcastThread.stopBroadcast(); broadcastThread = null; }
         broadcastThread = new LanBroadcastThread(srv.getMotd(), srv.getPort());
         broadcastThread.startBroadcast();
-        LOG.info("Broadcasting on {}:{}", String.join(", ", broadcastThread.getAddresses()), srv.getPort());
+        LOG.info("Broadcasting on port {}", srv.getPort());
     }
 
     private void stopBroadcast() {
