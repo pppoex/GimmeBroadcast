@@ -48,9 +48,9 @@ public class GimmeBroadcast {
 
     private void startBroadcast(MinecraftServer srv) {
         if (broadcastThread != null) { broadcastThread.stopBroadcast(); broadcastThread = null; }
-        broadcastThread = new LanBroadcastThread(srv.getMotd(), srv.getLocalIp(), srv.getPort());
+        broadcastThread = new LanBroadcastThread(srv.getMotd(), srv.getPort());
         broadcastThread.startBroadcast();
-        LOG.info("Broadcasting on {}:{}", srv.getLocalIp(), srv.getPort());
+        LOG.info("Broadcasting on {}:{}", String.join(", ", broadcastThread.getAddresses()), srv.getPort());
     }
 
     private void stopBroadcast() {
