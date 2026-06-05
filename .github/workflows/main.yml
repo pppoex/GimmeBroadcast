@@ -34,10 +34,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-caches-
 
-      - name: Build all versions
+      - name: Build 1.21.1
         run: | 
           chmod +x ./gradlew
-          ./gradlew build --no-daemon --continue
+          ./gradlew :mc-1.21.1:build --no-daemon --continue
 
       - name: Collect jars
         run: |
