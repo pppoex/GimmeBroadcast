@@ -75,13 +75,11 @@ public class LanBroadcastThread extends Thread {
             socket = new DatagramSocket();
 
             while (running.get() && !isInterrupted()) {
-                for (String addr : addresses) {
-                    try {
-                        byte[] data = buildPacket(addr);
-                        socket.send(new DatagramPacket(data, data.length, group, MULTICAST_PORT));
-                    } catch (IOException ignored) {
-                        // Address unreachable / no route — skip silently
-                    }
+                try {
+                    byte[] data = buildPacket();
+                    socket.send(new DatagramPacket(data, data.length, group, MULTICAST_PORT));
+                } catch (IOException e) {
+                    System.err.println("[LanBroadcast] send failed: " + e.getMessage());
                 }
                 Thread.sleep(BROADCAST_INTERVAL_MS);
             }
@@ -94,8 +92,8 @@ public class LanBroadcastThread extends Thread {
         }
     }
 
-    private byte[] buildPacket(String addr) {
-        return ("[MOTD]" + motd + "[/MOTD][AD]" + addr + ":" + port + "[/AD]")
+    private byte[] buildPacket() {
+        return ("[MOTD]" + motd + "[/MOTD][AD]" + port + "[/AD]")
                 .getBytes(StandardCharsets.UTF_8);
     }
 
