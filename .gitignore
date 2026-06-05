@@ -14,3 +14,6 @@ build/
 Thumbs.db
 *.log
 out/
+
+# NeoGradle auto-generated JUnit config
+mc-*/runs/
